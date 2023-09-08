@@ -1,0 +1,48 @@
+// .left__menu {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: row;
+// }
+
+* {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.left__menu {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.left__menu__item {
+  position: relative;
+}
+
+.left__menu__item__dropdown {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid beige;
+  background-color: beige;
+  border-radius: 5px;
+  //width: fit-content;
+  gap: 20px;
+  padding: 10px;
+  position: absolute;
+}
+
+a {
+  text-decoration: none;
+}
+
+.left__menu__item__dropdown {
+  display: none;
+  position: absolute;
+}
+
+.show {
+  display: flex;
+  z-index: 1;
+}
