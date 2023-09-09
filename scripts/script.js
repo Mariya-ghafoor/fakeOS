@@ -1,82 +1,93 @@
 //A function that toggles 'show' class when a button is pressed
 
-let menuId = "";
-let newMenuId = "";
-let counter = 0;
+let buttonClass = "";
+let newButtonClass = "";
 
 const subMenuHandler = (e) => {
   console.log("i am in menu handler");
-  console.log({ menuId });
+  console.log({ buttonClass });
   //console.log(e.currentTarget.id);
 
-  //new menuId representing the current target button
-  newMenuId = e.currentTarget.id;
-  console.log({ newMenuId });
+  //new buttonClass representing the current target button
+  newbuttonClass = e.currentTarget.id;
+  console.log({ newbuttonClass });
 
-  if (!menuId) {
-    subMenuToggler(newMenuId);
-    menuId = newMenuId;
+  if (!buttonClass) {
+    subMenuToggler(newbuttonClass);
+    buttonClass = newbuttonClass;
   } else {
-    if (menuId === newMenuId) {
-      subMenuToggler(menuId);
+    if (buttonClass === newbuttonClass) {
+      subMenuToggler(buttonClass);
     } else {
       console.log("different IDs");
-      removeClassShow(menuId);
-      //subMenuToggler(menuId);
-      subMenuToggler(newMenuId);
-      menuId = newMenuId;
+      removeClassShow(buttonClass);
+      //subMenuToggler(buttonClass);
+      subMenuToggler(newbuttonClass);
+      buttonClass = newbuttonClass;
     }
   }
   counter++;
   console.log({ counter });
 };
 
-const removeClassShow = (menuId) => {
-  const dropdownClass = "left__menu__dropdown__" + menuId;
+const removeClassShow = (buttonClass) => {
+  console.log("removing show class");
+  const dropdownClass = "left__menu__dropdown__" + buttonClass;
 
   const dropdownElement = document.getElementsByClassName(dropdownClass);
-  console.log("classlist-----");
 
   if ([...dropdownElement[0].classList].includes("show")) {
     dropdownElement[0].classList.remove("show");
   }
+  buttonClass = "";
 };
 
-const subMenuToggler = (menuId) => {
+const subMenuToggler = (newButtonClass) => {
   console.log("i am in toggler");
-  console.log(`i receieved id ${menuId}`);
-  const dropdownClass = "left__menu__dropdown__" + menuId;
+  console.log(`i receieved class ${newButtonClass}`);
 
-  const dropdownElement = document.getElementsByClassName(dropdownClass);
-  console.log({ dropdownClass });
+  const dropdownElement = document.getElementsByClassName(newButtonClass);
   console.log(dropdownElement[0]);
 
   dropdownElement[0].classList.toggle("show");
+  buttonClass = newButtonClass;
 };
 
 const subSubMenuHandler = (e) => {
-  let menuId = e.currentTarget.id;
-  console.log({ menuId });
-  subMenuToggler(menuId);
+  let buttonClass = e.currentTarget.id;
+  console.log({ buttonClass });
+  subMenuToggler(buttonClass);
 };
 
-const appleMenu = document.getElementById("apple");
-const finderMenu = document.getElementById("finder");
-const fileMenu = document.getElementById("file");
+// const appleMenu = document.getElementById("apple");
+// const finderMenu = document.getElementById("finder");
+// const fileMenu = document.getElementById("file");
 const recentItemsMenu = document.getElementById("recentItems");
+const recentItemsSubmenu = document.getElementById("recentItemsSubmenu");
 
 //****** Event handlers for menu *******
-// window.addEventListener("click", () => {
-//   console.log("you clicked in window");
-//   if (counter > 1 && newMenuId) {
-//     console.log({ newMenuId });
-//     console.log({ menuId });
-//     subMenuToggler(newMenuId);
-//     counter--;
-//   }
-// });
-appleMenu.addEventListener("click", subMenuHandler);
-finderMenu.addEventListener("click", subMenuHandler);
-fileMenu.addEventListener("click", subMenuHandler);
+
+window.addEventListener("click", (e) => {
+  const buttonClassArr = ["apple", "finder", "file"];
+  console.log("you clicked in window");
+  newButtonClass = e.target.id;
+  console.log({ buttonClass });
+  console.log({ newButtonClass });
+
+  if (buttonClass && buttonClass != newButtonClass) {
+    console.log("Going to remove class");
+    removeClassShow(buttonClass);
+  }
+
+  if (buttonClassArr.includes(newButtonClass)) {
+    console.log(
+      `Going to toggler coz newButtonClass= ${newButtonClass} and buttonClass = ${buttonClass}`
+    );
+    subMenuToggler(newButtonClass);
+  }
+  console.log("****The End****");
+});
+
 recentItemsMenu.addEventListener("mouseover", subSubMenuHandler);
 recentItemsMenu.addEventListener("mouseout", subSubMenuHandler);
+recentItemsSubmenu.addEventListener("mouseover", (e) => {});
