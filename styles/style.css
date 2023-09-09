@@ -34,6 +34,8 @@ button {
   gap: 20px;
   padding: 10px;
   position: absolute;
+  margin: 0;
+  background: linear-gradient(345deg, rgb(28, 34, 40) 0%, rgba(238, 223, 198, 0.7665660014) 45%, rgb(238, 208, 138) 100%);
 }
 
 .left__menu__item__dropdown {
@@ -43,9 +45,14 @@ button {
 
 .left__menu__item__dropdown--button {
   margin: 0;
-  padding: 0;
+  padding-right: 10px;
   border-bottom: 0.1px solid grey;
   width: 200px;
+  color: black;
+  border-radius: 5px;
+}
+.left__menu__item__dropdown--button:hover {
+  background-color: rgb(52, 128, 233);
 }
 
 .icon__chevron {
@@ -58,7 +65,7 @@ button {
 
 .left__menu__item__dropdown__dropdown {
   flex-direction: column;
-  margin-left: 210px;
+  margin-left: 200px;
   margin-top: -42px;
   border: 1px solid beige;
   border-radius: 5px;
@@ -66,6 +73,8 @@ button {
   padding: 10px;
   display: none;
   position: absolute;
+  z-index: 1;
+  background: linear-gradient(345deg, rgb(28, 34, 40) 0%, rgba(238, 223, 198, 0.7665660014) 45%, rgb(238, 208, 138) 100%);
 }
 
 .show {

@@ -43,20 +43,30 @@ const removeClassShow = (buttonClass) => {
 };
 
 const subMenuToggler = (newButtonClass) => {
-  console.log("i am in toggler");
-  console.log(`i receieved class ${newButtonClass}`);
+  //console.log("i am in toggler");
+  //console.log(`i receieved class ${newButtonClass}`);
 
   const dropdownElement = document.getElementsByClassName(newButtonClass);
-  console.log(dropdownElement[0]);
+  //console.log(dropdownElement[0]);
 
   dropdownElement[0].classList.toggle("show");
   buttonClass = newButtonClass;
 };
 
+const subSubMenuToggler = (newButtonClass) => {
+  //console.log("i am in toggler");
+  //console.log(`i receieved class ${newButtonClass}`);
+
+  const dropdownElement = document.getElementsByClassName(newButtonClass);
+  //console.log(dropdownElement[0]);
+
+  dropdownElement[0].classList.toggle("show");
+};
+
 const subSubMenuHandler = (e) => {
   let buttonClass = e.currentTarget.id;
-  console.log({ buttonClass });
-  subMenuToggler(buttonClass);
+
+  subSubMenuToggler(buttonClass);
 };
 
 // const appleMenu = document.getElementById("apple");
@@ -90,4 +100,3 @@ window.addEventListener("click", (e) => {
 
 recentItemsMenu.addEventListener("mouseover", subSubMenuHandler);
 recentItemsMenu.addEventListener("mouseout", subSubMenuHandler);
-recentItemsSubmenu.addEventListener("mouseover", (e) => {});
