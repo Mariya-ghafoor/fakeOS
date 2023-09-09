@@ -78,7 +78,15 @@ const recentItemsSubmenu = document.getElementById("recentItemsSubmenu");
 //****** Event handlers for menu *******
 
 window.addEventListener("click", (e) => {
-  const buttonClassArr = ["apple", "finder", "file"];
+  const buttonClassArr = [
+    "apple",
+    "finder",
+    "file",
+    "edit",
+    "view",
+    "go",
+    "help",
+  ];
   console.log("you clicked in window");
   newButtonClass = e.target.id;
   console.log({ buttonClass });
