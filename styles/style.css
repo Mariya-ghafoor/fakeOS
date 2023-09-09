@@ -1,12 +1,25 @@
 * {
-  cursor: pointer;
+  cursor: default;
   font-family: "Roboto", sans-serif;
+  text-align: left;
+}
+
+body {
+  background-image: url(../images/wallpaper.png);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: white;
 }
 
 .left__menu {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  border: 1px solid gray;
+  background: linear-gradient(39deg, rgb(80, 52, 35) 5%, rgb(227, 142, 0) 69%, rgb(235, 98, 0) 100%);
 }
 
 .left__menu__item {
@@ -17,15 +30,10 @@
   display: flex;
   flex-direction: column;
   border: 1px solid beige;
-  background-color: beige;
   border-radius: 5px;
   gap: 20px;
   padding: 10px;
   position: absolute;
-}
-
-a {
-  text-decoration: none;
 }
 
 .left__menu__item__dropdown {
@@ -33,7 +41,34 @@ a {
   position: absolute;
 }
 
+.left__menu__item__dropdown--button {
+  margin: 0;
+  padding: 0;
+  border-bottom: 0.1px solid grey;
+  width: 200px;
+}
+
+.icon__chevron {
+  float: right;
+}
+
+.left__menu__item__dropdown__item {
+  position: relative;
+}
+
+.left__menu__item__dropdown__dropdown {
+  flex-direction: column;
+  margin-left: 210px;
+  margin-top: -42px;
+  border: 1px solid beige;
+  border-radius: 5px;
+  gap: 20px;
+  padding: 10px;
+  display: none;
+  position: absolute;
+}
+
 .show {
   display: flex;
   z-index: 1;
-}
+}/*# sourceMappingURL=style.css.map */
