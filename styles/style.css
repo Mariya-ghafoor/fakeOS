@@ -2,6 +2,7 @@
   cursor: default;
   font-family: "Roboto", sans-serif;
   text-align: left;
+  caret-color: transparent;
 }
 
 body {
@@ -147,6 +148,28 @@ footer {
 .modal__header--calculator {
   background-color: rgb(91, 84, 80);
 }
+.modal__header--chrome {
+  height: 25px;
+  text-align: left;
+  background-color: rgb(231, 234, 237);
+}
+.modal__header--chrome--icon {
+  font-size: 15px;
+}
+.modal__header--chrome--newTab {
+  width: 180px;
+  border: 2px solid rgb(231, 234, 237);
+  border-bottom: none;
+  background-color: white;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+.modal__header--chrome--newTab--close {
+  margin-left: 70px;
+}
 
 .modal__text {
   width: 100%;
@@ -165,13 +188,62 @@ footer {
   width: 100%;
 }
 
+.modal__chrome__searchdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 15px;
+}
+.modal__chrome__searchdiv--searchbar {
+  border: 2px solid rgb(231, 234, 237);
+  background-color: rgb(231, 234, 237);
+  width: 70%;
+  border-radius: 20px;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.modal__chrome__searchdiv--searchbar--m {
+  border: 2px solid transparent;
+  background-color: rgb(242, 129, 60);
+  border-radius: 60px;
+  padding: 5px;
+  color: white;
+  font-size: 10px;
+}
+
+.modal__chrome__mainpage {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  gap: 10px;
+}
+.modal__chrome__mainpage--svg {
+  height: 70px;
+  width: 200px;
+}
+.modal__chrome__mainpage--searchbar {
+  border: 2px solid gray;
+  width: 400px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 /* The Close Button */
 .close {
   color: red;
   float: left;
   font-size: 15px;
   font-weight: bold;
-  border: 2px solid lightgoldenrodyellow;
+  border: 2px solid transparent;
   border-radius: 20px;
   background-color: red;
 }

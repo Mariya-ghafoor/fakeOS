@@ -164,7 +164,9 @@
         </div>
       </div>
       <div class="right__menu">
-        <button>Wifi</button>
+
+        <button><i class="fa-solid fa-battery-three-quarters"></i></i></button>
+        <button><i class="fa-solid fa-wifi"></i></button>
         <button id="right__menu--date">Hello</button>
       </div>
     </div>
@@ -196,7 +198,7 @@
       <!-- Chrome button -->
 
       <button class="apps">
-        <img src="./images/chrome_logo.png" class="apps__img" alt="" />
+        <img id= "chrome" class="apps__img" src="./images/chrome_logo.png"  alt="" />
       </button>
     </footer>
 
@@ -219,7 +221,7 @@
       <div class="modal-content">
         <div class="modal__header">
           <button id="terminal" class="close">&times;</button>
-          <span class="close__text">mariyakashif-- -zsh -- 80 x 24</span>
+          <span class="close__text" >mariyakashif-- -zsh -- 80 x 24</span>
         </div>
 
         <div class="modal__text">
@@ -329,21 +331,83 @@
                 =
               </div>
             </div>
-
-
-
-
-
-
-
-         
-              <!-- <div class="column">&#247;</div> -->
-            </div>
-
-        
+            </div>    
           </div>
         </div>
       </div>
     </div>
+
+      <!-- Chrome Modal -->
+    <div class="modal chrome">
+      <!-- Modal content -->
+      <div class="modal-content">
+
+        <div class="modal__header modal__header--chrome">
+          <span>
+          <button id="chrome" class="close">&times;</button>
+        </span>
+
+          <span class="modal__header--chrome--newTab">
+            <span><i class="fa-brands fa-chrome modal__header--chrome--icon"></i></span>
+          <span class="modal__header--chrome--newTab--text">New Tab</span> 
+          <span class="modal__header--chrome--newTab--close">&times</span> 
+          
+        </span>
+
+        <span>&#43</span>
+        </div>
+
+
+        <div class="modal__chrome__searchdiv">
+          <i class="fa-solid fa-arrow-left"></i>
+          <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-rotate-right"></i>
+
+          <span class="modal__chrome__searchdiv--searchbar"> 
+            <span>Search Google or type a URL</span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </span>
+
+          <span class="modal__chrome__searchdiv--searchbar--m">
+            <i class="fa-solid fa-m"></i>
+          </span>
+          
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+          
+        </div>
+
+        <div class="modal__chrome__mainpage">
+          <img class="modal__chrome__mainpage--svg" src="./images/google.svg" alt="">
+
+          <div class="modal__chrome__mainpage--searchbar"> 
+            <div>Search Google or type a URL</div>
+            
+            <div>
+              
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
   </body>
 </html>

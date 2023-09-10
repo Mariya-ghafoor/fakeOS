@@ -2,6 +2,7 @@
   cursor: default;
   font-family: "Roboto", sans-serif;
   text-align: left;
+  caret-color: transparent;
 }
 
 body {
@@ -178,6 +179,30 @@ footer {
   &--calculator {
     background-color: rgb(91, 84, 80);
   }
+  &--chrome {
+    height: 25px;
+    text-align: left;
+    background-color: rgb(231, 234, 237);
+    &--icon {
+      font-size: 15px;
+    }
+
+    &--newTab {
+      width: 180px;
+      border: 2px solid rgb(231, 234, 237);
+      border-bottom: none;
+      background-color: white;
+      display: inline-block;
+      padding: 4px;
+      border-radius: 10px;
+      margin-left: 10px;
+      margin-bottom: 0;
+
+      &--close {
+        margin-left: 70px;
+      }
+    }
+  }
 }
 
 .modal__text {
@@ -201,6 +226,59 @@ footer {
   }
 }
 
+.modal__chrome__searchdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 15px;
+
+  &--searchbar {
+    border: 2px solid rgb(231, 234, 237);
+    background-color: rgb(231, 234, 237);
+    width: 70%;
+    border-radius: 20px;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    &--m {
+      border: 2px solid transparent;
+      background-color: rgb(242, 129, 60);
+      border-radius: 60px;
+      padding: 5px;
+      color: white;
+      font-size: 10px;
+    }
+  }
+}
+
+.modal__chrome__mainpage {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  gap: 10px;
+
+  &--svg {
+    height: 70px;
+    width: 200px;
+  }
+
+  &--searchbar {
+    border: 2px solid gray;
+    width: 400px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 20px;
+  }
+}
+
 /* The Close Button */
 .close {
   //color: #aaa;
@@ -209,7 +287,7 @@ footer {
   float: left;
   font-size: 15px;
   font-weight: bold;
-  border: 2px solid lightgoldenrodyellow;
+  border: 2px solid transparent;
   border-radius: 20px;
   background-color: red;
 }

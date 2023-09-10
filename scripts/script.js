@@ -126,7 +126,7 @@ let day = todaysDate.toLocaleString("en-us", { weekday: "short" });
 let date = todaysDate.getDate();
 let month = todaysDate.toLocaleString("default", { month: "short" });
 
-let time = todaysDate.toLocaleTimeString().slice(0, -3);
+let time = todaysDate.toLocaleTimeString("en-US", { hour12: true });
 
 console.log(`${day} ${date} ${month} ${time}`);
 
