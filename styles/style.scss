@@ -14,6 +14,8 @@ button {
   color: white;
 }
 
+.menu {
+}
 .left__menu {
   display: flex;
   flex-direction: row;
@@ -98,4 +100,9 @@ button {
 .show {
   display: flex;
   z-index: 1;
+}
+.right__menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
 }
