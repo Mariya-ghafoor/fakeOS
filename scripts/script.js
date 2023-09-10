@@ -86,6 +86,8 @@ window.addEventListener("click", (e) => {
     "view",
     "go",
     "help",
+    "chrome",
+    "terminal",
   ];
   console.log("you clicked in window");
   newButtonClass = e.target.id;
@@ -123,3 +125,5 @@ console.log(`${day} ${date} ${month} ${time}`);
 let dateTimeElement = document.getElementById("right__menu--date");
 
 dateTimeElement.innerText = `${day} ${date} ${month} ${time}`;
+
+//************* Modals ***************/
