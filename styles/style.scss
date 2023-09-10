@@ -139,8 +139,9 @@ footer {
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
   height: 100%; /* Full height */
+  width: 100%; /* Full width */
+
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
@@ -155,14 +156,62 @@ footer {
   width: 80%; /* Could be more or less, depending on screen size */
   height: 60%;
   color: black;
+  border: 2px solid grey;
+  border-radius: 10px;
+
+  &--calculator {
+    height: 49%;
+    width: 20%;
+    background-color: rgb(91, 84, 80);
+    color: white;
+    padding: 3px;
+    font-size: 25px;
+  }
+}
+
+.modal__header {
+  background-color: antiquewhite;
+  height: 20px;
+  text-align: center;
+  padding: 5px;
+  margin: 0;
+  &--calculator {
+    background-color: rgb(91, 84, 80);
+  }
+}
+
+.modal__text {
+  //padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__text--calculator {
+  &--input {
+    text-align: end;
+    height: 52px;
+    font-size: 50px;
+  }
+  &--operators {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: 100%;
+    // height: 365px;
+  }
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+  //color: #aaa;
+  color: red;
+
+  float: left;
+  font-size: 15px;
   font-weight: bold;
+  border: 2px solid lightgoldenrodyellow;
+  border-radius: 20px;
+  background-color: red;
 }
 
 .close:hover,
@@ -170,6 +219,38 @@ footer {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  // background-color: yellow;
+  //gap: 5px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 30%;
+
+  // border: 3px solid black;
+}
+
+.column {
+  display: flex;
+  flex-basis: 2.5;
+  background-color: rgb(115, 116, 116);
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  gap: 1px;
+  height: 51px;
+
+  &__operator {
+    background-color: rgb(255, 159, 36);
+  }
 }
 
 .show {

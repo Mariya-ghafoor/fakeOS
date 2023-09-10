@@ -173,13 +173,7 @@
 
     <!-- Trigger/Open The Modal -->
     <footer>
-      <button id="myBtn">Open Modal</button>
-      <button class="apps">
-        <img src="./images/chrome_logo.png" class="apps__img" alt="" />
-      </button>
-      <button class="apps">
-        <img src="./images/calculator_icon.png" class="apps__img" alt="" />
-      </button>
+      <!-- Terminal button -->
       <button class="apps">
         <img
           id="terminal"
@@ -187,6 +181,22 @@
           class="apps__img"
           alt=""
         />
+      </button>
+
+      <!-- Calculator button -->
+      <button class="apps">
+        <img
+          id="calculator"
+          class="apps__img"
+          src="./images/calculator_icon.png"
+          class="apps__img"
+          alt=""
+        />
+      </button>
+      <!-- Chrome button -->
+
+      <button class="apps">
+        <img src="./images/chrome_logo.png" class="apps__img" alt="" />
       </button>
     </footer>
 
@@ -207,9 +217,132 @@
     <div class="modal terminal">
       <!-- Modal content -->
       <div class="modal-content">
-        <span id="terminal" class="close">&times;</span>
-        <div>Hello there</div>
-        <p>Some text in the Modal..</p>
+        <div class="modal__header">
+          <button id="terminal" class="close">&times;</button>
+          <span class="close__text">mariyakashif-- -zsh -- 80 x 24</span>
+        </div>
+
+        <div class="modal__text">
+          <p>
+            Last login: Sun Sep 10 12:10 on ttys001 <br />
+            <br />
+            mariyakashif@Mariyas-MacBook-Air ~ %
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculator Modal -->
+    <div class="modal calculator">
+      <!-- Modal content -->
+      <div class="modal-content modal-content--calculator">
+        <!-- header -->
+        <div class="modal__header modal__header--calculator">
+          <button id="calculator" class="close">&times;</button>
+          
+        
+        </div>
+        <!-- text -->
+
+        <div class="modal__text modal__text--calculator">
+
+          <!-- input text -->
+          <div class="modal__text--calculator--input">0</div>
+
+          <div class="modal__text--calculator--operators">
+
+            <div class="row">
+              <div class="column">
+                AC
+              </div>
+              <div class="column">
+                +/-
+              </div>
+              <div class="column">
+                %
+              </div>
+              <div class="column column__operator">
+                &#247
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column">
+                7
+              </div>
+              <div class="column">
+                8
+              </div>
+              <div class="column">
+                9
+              </div>
+              <div class="column column__operator">
+                x
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="column">
+                4
+              </div>
+              <div class="column">
+                5
+              </div>
+              <div class="column">
+                6
+              </div>
+              <div class="column column__operator">
+                -
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column">
+                1
+              </div>
+              <div class="column">
+                2
+              </div>
+              <div class="column">
+                3
+              </div>
+              <div class="column column__operator">
+                +
+              </div>
+            </div>
+
+
+
+
+            <div class="row">
+              <div class="column">
+                0
+              </div>
+              <div class="column">
+                0
+              </div>
+              <div class="column">
+                .
+              </div>
+              <div class="column column__operator">
+                =
+              </div>
+            </div>
+
+
+
+
+
+
+
+         
+              <!-- <div class="column">&#247;</div> -->
+            </div>
+
+        
+          </div>
+        </div>
       </div>
     </div>
   </body>

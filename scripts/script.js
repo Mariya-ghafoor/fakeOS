@@ -32,9 +32,16 @@ const subMenuHandler = (e) => {
 
 const removeClassShow = (buttonClass) => {
   console.log("removing show class");
+  console.log({ buttonClass });
+  let apps = ["chrome", "terminal", "calculator"];
+
+  //We dont want this code to run if user has previously closed an app as the app is already closed
+  if (apps.includes(buttonClass)) return;
+
   const dropdownClass = "left__menu__dropdown__" + buttonClass;
 
   const dropdownElement = document.getElementsByClassName(dropdownClass);
+  console.log([...dropdownElement]);
 
   if ([...dropdownElement[0].classList].includes("show")) {
     dropdownElement[0].classList.remove("show");
@@ -88,6 +95,7 @@ window.addEventListener("click", (e) => {
     "help",
     "chrome",
     "terminal",
+    "calculator",
   ];
   console.log("you clicked in window");
   newButtonClass = e.target.id;
