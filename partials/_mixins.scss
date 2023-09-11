@@ -1,0 +1,12 @@
+@mixin flexbox($fd, $jc, $ai, $g) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin border($b, $br) {
+  border: $b;
+  border-radius: $br;
+}

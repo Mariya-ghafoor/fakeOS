@@ -19,36 +19,37 @@ button {
 .left__menu {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
   gap: 10px;
   border: 1px solid gray;
   background: linear-gradient(39deg, rgb(80, 52, 35) 5%, rgb(227, 142, 0) 69%, rgb(235, 98, 0) 100%);
 }
+
 .left__menu__item {
   position: relative;
 }
+
 .left__menu__item__dropdown {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5px;
   border: 1px solid beige;
   border-radius: 5px;
+  gap: 20px;
   padding: 10px;
   position: absolute;
   margin: 0;
   background: linear-gradient(345deg, rgb(28, 34, 40) 0%, rgba(238, 223, 198, 0.7665660014) 45%, rgb(238, 208, 138) 100%);
+}
+
+.left__menu__item__dropdown {
   display: none;
   position: absolute;
 }
+
 .left__menu__item__dropdown--button {
   margin: 0;
   padding-right: 10px;
   border-bottom: 0.1px solid grey;
   width: 200px;
-  height: 25px;
   color: black;
   border-radius: 5px;
 }
@@ -65,11 +66,8 @@ button {
 }
 
 .left__menu__item__dropdown__dropdown {
-  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5px;
+  gap: 20px;
   margin-left: 200px;
   margin-top: -42px;
   border: 1px solid beige;
@@ -83,10 +81,7 @@ button {
 
 .right__menu {
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
-  gap: 0;
   width: 100vw;
 }
 
@@ -127,6 +122,7 @@ footer {
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
   height: 60%;
   color: black;
@@ -163,12 +159,13 @@ footer {
 .modal__header--chrome--newTab {
   width: 180px;
   border: 2px solid rgb(231, 234, 237);
-  border-radius: 10px;
   border-bottom: none;
   background-color: white;
   display: inline-block;
   padding: 4px;
+  border-radius: 10px;
   margin-left: 10px;
+  margin-bottom: 0;
 }
 .modal__header--chrome--newTab--close {
   margin-left: 70px;
@@ -187,26 +184,22 @@ footer {
 .modal__text--calculator--operators {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1px;
   width: 100%;
 }
 
 .modal__chrome__searchdiv {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 0;
   padding: 20px;
   height: 15px;
 }
 .modal__chrome__searchdiv--searchbar {
   border: 2px solid rgb(231, 234, 237);
-  border-radius: 20px;
   background-color: rgb(231, 234, 237);
   width: 70%;
+  border-radius: 20px;
   height: 100%;
   padding: 10px;
   display: flex;
@@ -214,8 +207,8 @@ footer {
 }
 .modal__chrome__searchdiv--searchbar--m {
   border: 2px solid transparent;
-  border-radius: 60px;
   background-color: rgb(242, 129, 60);
+  border-radius: 60px;
   padding: 5px;
   color: white;
   font-size: 10px;
@@ -227,24 +220,21 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   height: 70%;
+  gap: 10px;
 }
 .modal__chrome__mainpage--svg {
   height: 70px;
   width: 200px;
 }
 .modal__chrome__mainpage--searchbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
   border: 2px solid gray;
-  border-radius: 20px;
   width: 400px;
   height: 20px;
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
+  border-radius: 20px;
 }
 
 /* The Close Button */
@@ -268,25 +258,24 @@ footer {
 .row {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  gap: 0;
-  width: 100%;
   text-align: center;
   height: 30%;
 }
 
 .column {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1px;
   flex-basis: 2.5;
   background-color: rgb(115, 116, 116);
   width: 30%;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   border: 1px solid black;
+  gap: 1px;
   height: 51px;
 }
 .column__operator {
@@ -296,4 +285,4 @@ footer {
 .show {
   display: flex;
   z-index: 1;
-}/*# sourceMappingURL=style1.css.map */
+}/*# sourceMappingURL=style.css.map */

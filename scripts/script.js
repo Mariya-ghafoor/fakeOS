@@ -1,3 +1,5 @@
+import { displayDateTime } from "../modules/dom-utils.js";
+
 //A function that toggles 'show' class when a button is pressed
 
 let buttonClass = "";
@@ -76,9 +78,6 @@ const subSubMenuHandler = (e) => {
   subSubMenuToggler(buttonClass);
 };
 
-// const appleMenu = document.getElementById("apple");
-// const finderMenu = document.getElementById("finder");
-// const fileMenu = document.getElementById("file");
 const recentItemsMenu = document.getElementById("recentItems");
 const recentItemsSubmenu = document.getElementById("recentItemsSubmenu");
 
@@ -119,19 +118,4 @@ window.addEventListener("click", (e) => {
 recentItemsMenu.addEventListener("mouseover", subSubMenuHandler);
 recentItemsMenu.addEventListener("mouseout", subSubMenuHandler);
 
-// Adding current date and time dynamically
-let todaysDate = new Date();
-//console.log(todaysDate);
-let day = todaysDate.toLocaleString("en-us", { weekday: "short" });
-let date = todaysDate.getDate();
-let month = todaysDate.toLocaleString("default", { month: "short" });
-
-let time = todaysDate.toLocaleTimeString("en-US", { hour12: true });
-
-console.log(`${day} ${date} ${month} ${time}`);
-
-let dateTimeElement = document.getElementById("right__menu--date");
-
-dateTimeElement.innerText = `${day} ${date} ${month} ${time}`;
-
-//************* Modals ***************/
+displayDateTime();
